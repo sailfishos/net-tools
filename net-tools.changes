@@ -1,0 +1,45 @@
+* Fri May 27 2011 Anas Nashif <anas.nashif@intel.com> - 1.60
+- Refined auto-documentation
+
+* Tue May 24 2011 Anas Nashif <anas.nashif@intel.com> - 1.60
+- Remove dependency on chkconfig
+- Repackage documentation/translations
+
+* Sat Apr 10 2010 Anas Nashif <anas.nashif@intel.com> - 1.60
+- Fixed rpmlint errors
+
+* Thu Jul 16 2009 Anas Nashif <anas.nashif@intel.com> - 1.60
+- Make it build with new kernel headers
+
+* Fri Jan 09 2009 Anas Nashif <anas.nashif@intel.com> 1.60
+- Fixed tunnel headers 
+
+* Mon Dec 08 2008 Iñaky Pérez-González <inaky.perez-gonzalez@intel.com> 1.60
+- fold doc/man pages back into main and -extra packages
+- move localized material to -extra
+- fix locale path specification so that the RPM doesn't include the
+  directories, just the files.
+
+* Fri Dec 05 2008 Anas Nashif <anas.nashif@intel.com> 1.60
+- Kernel headers change, patch for iptunnel not needed
+
+* Thu Dec 04 2008 Iñaky Pérez-González <inaky.perez-gonzalez@intel.com> 1.60
+- net-tools: clean up spec, split up into -extras and -doc
+ * Move all documentation and xlations to -doc
+ * Move unneeded binaries and netplugd service to -extras. 
+	
+* Fri Nov 28 2008 Anas Nashif <anas.nashif@intel.com> 1.60
+- fixed compile error with new kernel headers
+
+* Fri Nov 28 2008 Anas Nashif <anas.nashif@intel.com> 1.60
+- Fixes from Fedora:
+ * fixed tcp timers info in netstat (#466845)
+ * fixed ifconfig's man page (#454271, #432328)
+ * fixed man pages for arp (#446195)
+ * fixed netstat --interfaces option (#446187)
+ * fixed clearing flags in ifconfig (#450252)
+ * netstat displays correct sctp statistics (#445535) <zprikryl@redhat.com>
+
+* Wed Jul 23 2008 Martin Xu <martin.xu@intel.com>
+- add %doc to man file
+
