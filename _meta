@@ -1,8 +1,0 @@
-<package project="Mer:Trunk:Base" name="net-tools">
-  <title>Basic networking tools</title>
-  <description>The net-tools package contains basic networking tools, including
-ifconfig, netstat, route, and others.
-
-</description>
-  <url>http://www.tazenda.demon.co.uk/phil/net-tools/</url>
-</package>
