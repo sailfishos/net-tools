@@ -7,7 +7,7 @@ Version: 1.60
 Release: 87
 License: GPL+
 Group: System/Base
-URL: http://www.tazenda.demon.co.uk/phil/net-tools/
+URL: http://sourceforge.net/projects/net-tools/
 Source0: http://www.tazenda.demon.co.uk/phil/net-tools/net-tools-%{version}.tar.bz2
 Source1: http://www.red-bean.com/~bos/netplug/netplug-%{npversion}.tar.bz2
 Source2: net-tools-%{version}-config.h

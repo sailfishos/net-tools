@@ -1,3 +1,7 @@
+* Mon Aug 20 2012 Antti Alatarvas <antti.alatarvas@gmail.com> - 1.60
+- Changed net-tools.spec URL
+- Fixes MER#263 : net-tools spec file has obsolete URL entry
+
 * Fri May 27 2011 Anas Nashif <anas.nashif@intel.com> - 1.60
 - Refined auto-documentation
 
