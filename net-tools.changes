@@ -1,3 +1,6 @@
+* Tue Jan 22 2013 Oleg Girko <ol+mer@infoserver.ru> - 1.60
+- Disable features unsupported by new kernels, enable useful features.
+
 * Mon Aug 20 2012 Antti Alatarvas <antti.alatarvas@gmail.com> - 1.60
 - Changed net-tools.spec URL
 - Fixes MER#263 : net-tools spec file has obsolete URL entry

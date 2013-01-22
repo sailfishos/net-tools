@@ -84,6 +84,11 @@ Patch69: net-tools-1.60-clear-flag.patch
 Patch70: net-tools-1.60-metric-tunnel-man.patch
 Patch71: net-tools-1.60-netstat-probe.patch
 Patch72: net-tools-1.60-ip.patch
+Patch73: net-tools-1.60-disable-hwstrip.patch
+Patch74: net-tools-1.60-enable-ipv6.patch
+Patch75: net-tools-1.60-disable-hwtr.patch
+Patch76: net-tools-1.60-enable-i18n.patch
+Patch77: net-tools-1.60-enable-features.patch
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: gettext
@@ -175,6 +180,12 @@ localized support.
 # after splitting the kernel header package, this is not needed anymore?
 %patch72 -p1 -b .iptunnel
 
+%patch73 -p1
+%patch74 -p1
+%patch75 -p1
+%patch76 -p1
+%patch77 -p1
+
 
 cp %SOURCE2 ./config.h
 cp %SOURCE3 ./config.make
@@ -189,6 +200,7 @@ perl -pi -e "s|-O2||" Makefile
 
 
 %build
+yes '' | ./configure.sh config.in
 sed -i "s/HAVE_SELINUX=1/HAVE_SELINUX=0/g" ./config.make 
 make
 gcc $RPM_OPT_FLAGS -o ether-wake ether-wake.c

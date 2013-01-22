@@ -1,0 +1,12 @@
+--- net-tools-1.60/config.in.orig	2012-12-19 01:38:17.661764944 +0000
++++ net-tools-1.60/config.in	2012-12-19 01:47:33.100250492 +0000
+@@ -87,6 +87,6 @@
+ *
+ *           Other Features.
+ *
+-bool 'IP Masquerading support' HAVE_FW_MASQUERADE n
+-bool 'Build iptunnel and ipmaddr' HAVE_IP_TOOLS n
+-bool 'Build mii-tool' HAVE_MII n
++bool 'IP Masquerading support' HAVE_FW_MASQUERADE y
++bool 'Build iptunnel and ipmaddr' HAVE_IP_TOOLS y
++bool 'Build mii-tool' HAVE_MII y

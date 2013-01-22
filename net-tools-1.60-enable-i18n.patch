@@ -1,0 +1,11 @@
+--- net-tools-1.60/config.in.orig	2012-12-19 01:26:37.951701595 +0000
++++ net-tools-1.60/config.in	2012-12-19 01:37:00.105982782 +0000
+@@ -42,7 +42,7 @@
+ * course, welcome.  Answer `n' here if you have no support for
+ * internationalization on your system.
+ *
+-bool 'Does your system support GNU gettext?' I18N n
++bool 'Does your system support GNU gettext?' I18N y
+ *
+ *
+ *             Protocol Families.

@@ -1,0 +1,11 @@
+--- net-tools-1.60/config.in.orig	2012-12-19 01:21:32.872628637 +0000
++++ net-tools-1.60/config.in	2012-12-19 01:22:40.392299689 +0000
+@@ -69,7 +69,7 @@
+ bool 'PPP (serial line) support' HAVE_HWPPP y
+ bool 'IPIP Tunnel support' HAVE_HWTUNNEL y
+ bool 'STRIP (Metricom radio) support' HAVE_HWSTRIP n
+-bool 'Token ring (generic) support' HAVE_HWTR y
++bool 'Token ring (generic) support' HAVE_HWTR n
+ bool 'AX25 (packet radio) support' HAVE_HWAX25 y
+ bool 'Rose (packet radio) support' HAVE_HWROSE n
+ bool 'NET/ROM (packet radio) support' HAVE_HWNETROM y

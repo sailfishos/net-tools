@@ -1,0 +1,11 @@
+--- net-tools-1.60/config.in.orig	2012-12-19 01:16:01.244339041 +0000
++++ net-tools-1.60/config.in	2012-12-19 01:18:38.601898536 +0000
+@@ -49,7 +49,7 @@
+ * 
+ bool 'UNIX protocol family' HAVE_AFUNIX y
+ bool 'INET (TCP/IP) protocol family' HAVE_AFINET y
+-bool 'INET6 (IPv6) protocol family' HAVE_AFINET6 n
++bool 'INET6 (IPv6) protocol family' HAVE_AFINET6 y
+ bool 'Novell IPX/SPX protocol family' HAVE_AFIPX y
+ bool 'Appletalk DDP protocol family' HAVE_AFATALK y
+ bool 'AX25 (packet radio) protocol family' HAVE_AFAX25 y
