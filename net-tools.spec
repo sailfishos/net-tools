@@ -5,7 +5,7 @@ Summary: Basic networking tools
 Name: net-tools
 Version: 1.60
 Release: 87
-License: GPL+
+License: GPLv2+
 Group: System/Base
 URL: http://sourceforge.net/projects/net-tools/
 Source0: http://www.tazenda.demon.co.uk/phil/net-tools/net-tools-%{version}.tar.bz2
@@ -99,7 +99,6 @@ ifconfig, netstat, route, and others.
 
 %package extra
 Summary: Extra goodies from net-tools package
-Group: System/Base
 
 %description extra
 net-tools extra goodies, including not-so commonly needed tools
