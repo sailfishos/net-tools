@@ -4,7 +4,7 @@
 Summary: Basic networking tools
 Name: net-tools
 Version: 1.60
-Release: 87
+Release: 88
 License: GPLv2+
 Group: System/Base
 URL: http://sourceforge.net/projects/net-tools/
@@ -105,6 +105,15 @@ net-tools extra goodies, including not-so commonly needed tools
 (netplugd, nisdomainname, ether-wake, ipmaddr, mii-diag and mii-tool,
 plipconfig and slattach), translations of the man pages and
 localized support.
+
+%package doc
+Summary:   Documentation for %{name}
+Group:     Documentation
+Requires:  %{name} = %{version}-%{release}
+Obsoletes: %{name}-docs
+
+%description doc
+Man pages for %{name}.
 
 %prep
 %setup -q -a 1
@@ -219,12 +228,11 @@ rm -rf %{buildroot}%{_mandir}/*/man*
 
 %find_lang %{name}
 
-%docs_package
-
 %lang_package
 
 %files
 %defattr(-,root,root,-)
+%license COPYING
 /bin/*
 /sbin/*
 %exclude /bin/nisdomainname
@@ -235,9 +243,9 @@ rm -rf %{buildroot}%{_mandir}/*/man*
 %exclude /sbin/mii-tool
 %exclude /sbin/plipconfig
 %exclude /sbin/slattach
-%doc COPYING
 
 %files extra
+%defattr(-,root,root,-)
 /bin/nisdomainname
 /bin/ypdomainname
 /sbin/ether-wake
@@ -246,3 +254,7 @@ rm -rf %{buildroot}%{_mandir}/*/man*
 /sbin/mii-tool
 /sbin/plipconfig
 /sbin/slattach
+
+%files doc
+%defattr(-,root,root,-)
+%{_mandir}/man*/*.*
