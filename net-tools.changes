@@ -1,3 +1,6 @@
+* Wed Jan 09 2019 Tomi Leppänen <tomi.leppanen@jolla.com> - 1.60-88
+- [packaging] Rename net-tools-docs to net-tools. Contributes to JB#38578
+
 * Tue Jan 22 2013 Oleg Girko <ol+mer@infoserver.ru> - 1.60
 - Disable features unsupported by new kernels, enable useful features.
 
