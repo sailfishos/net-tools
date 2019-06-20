@@ -147,7 +147,7 @@ Man pages for %{name}.
 %patch32 -p1 -b .isofix
 %patch33 -p1 -b .bitkeeper
 %patch34 -p1 -b .ifconfig_ib
-%patch35 -p1 
+%patch35 -p1
 %patch36 -p1 -b .execshield
 %patch37 -p1 -b .pie
 %patch38 -p1 -b .ifaceopt
@@ -209,7 +209,7 @@ perl -pi -e "s|-O2||" Makefile
 
 %build
 yes '' | ./configure.sh config.in
-sed -i "s/HAVE_SELINUX=1/HAVE_SELINUX=0/g" ./config.make 
+sed -i "s/HAVE_SELINUX=1/HAVE_SELINUX=0/g" ./config.make
 make
 gcc $RPM_OPT_FLAGS -o ether-wake ether-wake.c
 gcc $RPM_OPT_FLAGS -o mii-diag mii-diag.c
@@ -221,10 +221,17 @@ make BASEDIR=$RPM_BUILD_ROOT mandir=%{_mandir} install
 install -m 755 ether-wake %{buildroot}/sbin
 install -m 755 mii-diag %{buildroot}/sbin
 
-
 rm %{buildroot}/sbin/rarp
 rm -rf %{buildroot}%{_mandir}/*/man*
 
+mkdir %{buildroot}%{_bindir}
+mkdir %{buildroot}%{_sbindir}
+
+mv %{buildroot}/bin/* %{buildroot}%{_bindir}/
+mv %{buildroot}/sbin/* %{buildroot}%{_sbindir}/
+
+rm -rf %{buildroot}/bin
+rm -rf %{buildroot}/sbin
 
 %find_lang %{name}
 
@@ -233,27 +240,27 @@ rm -rf %{buildroot}%{_mandir}/*/man*
 %files
 %defattr(-,root,root,-)
 %license COPYING
-/bin/*
-/sbin/*
-%exclude /bin/nisdomainname
-%exclude /bin/ypdomainname
-%exclude /sbin/ether-wake
-%exclude /sbin/ipmaddr
-%exclude /sbin/mii-diag
-%exclude /sbin/mii-tool
-%exclude /sbin/plipconfig
-%exclude /sbin/slattach
+%{_bindir}/*
+%{_sbindir}/*
+%exclude %{_bindir}/nisdomainname
+%exclude %{_bindir}/ypdomainname
+%exclude %{_sbindir}/ether-wake
+%exclude %{_sbindir}/ipmaddr
+%exclude %{_sbindir}/mii-diag
+%exclude %{_sbindir}/mii-tool
+%exclude %{_sbindir}/plipconfig
+%exclude %{_sbindir}/slattach
 
 %files extra
 %defattr(-,root,root,-)
-/bin/nisdomainname
-/bin/ypdomainname
-/sbin/ether-wake
-/sbin/ipmaddr
-/sbin/mii-diag
-/sbin/mii-tool
-/sbin/plipconfig
-/sbin/slattach
+%{_bindir}/nisdomainname
+%{_bindir}/ypdomainname
+%{_sbindir}/ether-wake
+%{_sbindir}/ipmaddr
+%{_sbindir}/mii-diag
+%{_sbindir}/mii-tool
+%{_sbindir}/plipconfig
+%{_sbindir}/slattach
 
 %files doc
 %defattr(-,root,root,-)
