@@ -1,3 +1,6 @@
+* Sat Oct 04 2025 Matti Lehtimäki <matti.lehtimaki@jolla.com> - 2.10-1
+- [net-tools] Update to version 2.10. JB#63045
+
 * Wed Jan 09 2019 Tomi Leppänen <tomi.leppanen@jolla.com> - 1.60-88
 - [packaging] Rename net-tools-docs to net-tools. Contributes to JB#38578
 
