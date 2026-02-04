@@ -4,7 +4,7 @@
 Summary: Basic networking tools
 Name: net-tools
 Version: 2.10
-Release: 1
+Release: 2
 License: GPLv2+
 URL: http://sourceforge.net/projects/net-tools/
 Source0: net-tools-%{version}.tar.xz
@@ -68,6 +68,11 @@ gcc $RPM_OPT_FLAGS -o mii-diag mii-diag.c
 %install
 
 make BASEDIR=$RPM_BUILD_ROOT mandir=%{_mandir} install
+
+# ifconfig and route are installed into /bin by default
+# add symlinks for backward compatibility
+ln -s ../bin/ifconfig %{buildroot}/sbin
+ln -s ../bin/route %{buildroot}/sbin
 
 install -m 755 ether-wake %{buildroot}/sbin
 install -m 755 mii-diag %{buildroot}/sbin
